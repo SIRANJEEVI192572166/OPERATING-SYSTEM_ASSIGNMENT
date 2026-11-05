@@ -1,0 +1,20 @@
+openat(AT_FDCWD, "records.dat", 0x241) = 3
+write(3, "...", 4096) = 4096
+write(3, "...", 4096) = 4096
+write(3, "...", 1808) = 1808
+close(3) = 0
+openat(AT_FDCWD, "records.dat", 0x0) = 3
+openat(AT_FDCWD, "copy.dat", 0x241) = 4
+read(3, "...", 4096) = 4096
+write(4, "...", 4096) = 4096
+read(3, "...", 4096) = 4096
+write(4, "...", 4096) = 4096
+read(3, "...", 4096) = 1808
+write(4, "...", 1808) = 1808
+read(3, "...", 4096) = 0
+close(3) = 0
+close(4) = 0
+unlink("records.dat") = 0
+unlink("copy.dat") = 0
+buffer 4096 bytes: 4 read() calls
+write(1, "...", 34) = 34

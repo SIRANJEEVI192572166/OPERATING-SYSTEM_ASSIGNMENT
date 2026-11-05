@@ -1,0 +1,12 @@
+$ time ./bench_proc fork
+1000 x fork()+exit+wait         :     40.0 ms
+
+real	0m0.041s
+user	0m0.022s
+sys	0m0.017s
+$ time ./bench_proc thread
+1000 x pthread_create+join      :      7.2 ms
+
+real	0m0.008s
+user	0m0.004s
+sys	0m0.004s

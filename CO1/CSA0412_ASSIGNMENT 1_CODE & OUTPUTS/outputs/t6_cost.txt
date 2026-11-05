@@ -1,0 +1,5 @@
+ordinary function call        :      0.4 ns
+system call (getpid)          :    100.6 ns
+IPC round trip (2 pipes)      :   2470.9 ns
+system call / function call   :    232.7 x
+IPC round trip / system call  :     24.6 x

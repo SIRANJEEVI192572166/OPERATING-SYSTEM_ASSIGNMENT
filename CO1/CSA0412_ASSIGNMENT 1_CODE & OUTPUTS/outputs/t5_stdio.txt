@@ -1,0 +1,8 @@
+fread/fwrite copy: 10000 bytes processed with 1-byte library calls
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 12.91    0.000023           6         4           write
+  7.76    0.000014           3         5           read
+  2.33    0.000004           2         2           pread64
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000176                    49         1 total

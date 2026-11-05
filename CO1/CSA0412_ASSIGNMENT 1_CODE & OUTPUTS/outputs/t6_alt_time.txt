@@ -1,0 +1,12 @@
+== copy_stdio 4MB
+fread/fwrite copy: 4194304 bytes processed with 1-byte library calls
+
+real	0m0.079s
+user	0m0.078s
+sys	0m0.000s
+== copy_mmap 4MB
+mmap copy: 4194304 bytes
+
+real	0m0.003s
+user	0m0.003s
+sys	0m0.000s
