@@ -1,0 +1,2 @@
+Readers-writers: 3 readers x 2000 reads, 2 writers x 2000 writes -> reads done = 6000, inconsistent reads = 0, final A = 4000, B = 4000
+Dining philosophers: meals eaten = 3 3 3 3 3  (each philosopher finished, no deadlock)

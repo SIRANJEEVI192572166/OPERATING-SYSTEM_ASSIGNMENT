@@ -1,0 +1,3 @@
+No protection                                            seats sold = 160 of 100  -> OVERSOLD
+Binary semaphore (wait/signal around check+decrement)    seats sold = 100 of 100  -> correct
+Counting semaphore initialised to 100                    seats sold = 100 of 100  -> correct

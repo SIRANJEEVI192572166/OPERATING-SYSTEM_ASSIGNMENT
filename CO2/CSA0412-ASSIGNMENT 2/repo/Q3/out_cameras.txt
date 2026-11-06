@@ -1,0 +1,8 @@
+CPUs online: 1, cameras: 64, per-frame: 2 ms I/O wait + CPU work
+
+Version                 Time (ms)  Speed-up   Plates
+Sequential (1 thread)       220.4      1.00      206
+Pool of 4 threads            88.9      2.48      206
+Pool of 8 threads            82.7      2.66      206
+Pool of 16 threads           87.0      2.53      206
+Thread per camera (64)       82.2      2.68      206

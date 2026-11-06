@@ -1,0 +1,3 @@
+4 producer(s), 4 consumer(s): items produced = 20000, consumed exactly once = 264, never consumed = 13669, consumed more than once = 6067  -> WRONG
+4 producer(s), 4 consumer(s): items produced = 20000, consumed exactly once = 2580, never consumed = 11033, consumed more than once = 6387  -> WRONG
+4 producer(s), 4 consumer(s): items produced = 20000, consumed exactly once = 6, never consumed = 13964, consumed more than once = 6030  -> WRONG

@@ -1,0 +1,2 @@
+1 producer(s), 1 consumer(s): items produced = 5000, consumed exactly once = 5000, never consumed = 0, consumed more than once = 0  -> CORRECT
+4 producer(s), 4 consumer(s): items produced = 20000, consumed exactly once = 20000, never consumed = 0, consumed more than once = 0  -> CORRECT

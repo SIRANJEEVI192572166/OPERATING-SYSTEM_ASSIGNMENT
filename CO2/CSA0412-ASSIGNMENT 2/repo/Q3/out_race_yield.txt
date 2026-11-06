@@ -1,0 +1,5 @@
+Mode: forced interleaving (sched_yield between load and store)
+Expected value        : 8000000
+Unprotected counter   : 2001470   (lost updates: 5998530)
+Mutex-protected       : 8000000   (lost updates: 0)
+Atomic (fetch_add)    : 8000000   (lost updates: 0)

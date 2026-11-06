@@ -1,0 +1,4 @@
+Peterson (C11 seq_cst atomics): counter = 40000, expected 40000
+real	0m0.005s
+Peterson (plain volatile, no fences): counter = 40000, expected 40000
+real	0m0.003s

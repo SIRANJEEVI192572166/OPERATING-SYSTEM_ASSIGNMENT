@@ -1,0 +1,7 @@
+Multi-process version (CPUs online: 1)
+Version                   Time (ms)  Speed-up   Plates
+1 process                     218.5      1.00      206
+4 processes                    87.4      2.50      206
+8 processes                    83.8      2.61      206
+16 processes                   86.3      2.53      206
+64 processes                   89.3      2.45      206

@@ -1,0 +1,13 @@
+8 agent threads x 1500 booking requests, 8 trains x 10 coaches x 72 seats, CPUs online: 1
+
+Critical section = check + update only (CPU only)
+Locking scheme              Time (ms)     Bookings/s    Booked double-booking?
+One global lock                   0.7       17533837      5055 none
+One lock per train (8)            0.7       18356062      5055 none
+One lock per coach (80)           0.6       19205531      5055 none
+
+Critical section = update + 50 us booking-record write (I/O wait)
+Locking scheme              Time (ms)     Bookings/s    Booked double-booking?
+One global lock                 681.0          17621      5055 none
+One lock per train (8)          168.8          71087      5055 none
+One lock per coach (80)          91.0         131803      5055 none

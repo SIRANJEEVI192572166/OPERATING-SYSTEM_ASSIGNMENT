@@ -1,0 +1,17 @@
+Safety algorithm, m = 3 resource types
+Case                  n   us per check   growth vs n/10
+Best (1 pass)        10           0.11                -
+Best (1 pass)       100           0.49             x4.4
+Best (1 pass)      1000           6.05            x12.3
+Worst (n passes)     10           0.20                -
+Worst (n passes)    100          12.95            x63.9
+Worst (n passes)   1000        1077.55            x83.2
+
+Prediction: best case O(n*m) -> x10 when n grows x10; worst case O(n^2*m) -> x100.
+
+Growth with m (n = 100, worst case):
+m      us per check
+3             14.37
+6             31.48
+12            54.46
+24           101.19

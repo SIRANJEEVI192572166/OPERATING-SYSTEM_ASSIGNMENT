@@ -1,0 +1,3 @@
+  PID  PPID STAT WCHAN            COMMAND
+20990     1 S    do_wait          q4_pipe_noclose
+20991 20990 S    anon_pipe_read   q4_pipe_noclose

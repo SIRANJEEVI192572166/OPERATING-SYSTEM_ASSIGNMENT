@@ -1,0 +1,22 @@
+parent pid=4233
+
+/proc evidence (D has exited but is not yet reaped):
+  parent                 pid=4233   State: R (running)    VmRSS: 1784 kB
+  child A (sleeping)     pid=4234   State: S (sleeping)   VmRSS: 292 kB
+  child B (CPU busy)     pid=4235   State: R (running)    VmRSS: 292 kB
+  child C (sleeping)     pid=4236   State: S (sleeping)   VmRSS: 292 kB
+  child D (exited early) pid=4237   State: Z (zombie)     VmRSS: -
+
+ps evidence:
+  PID  PPID STAT WCHAN              ELAPSED COMMAND
+ 4234  4233 S    hrtimer_nanosl       00:00 q1_fork
+ 4235  4233 R    -                    00:00 q1_fork
+ 4236  4233 S    hrtimer_nanosl       00:00 q1_fork
+ 4237  4233 Z    -                    00:00 q1_fork
+ 4238  4233 S    do_wait              00:00 sh
+
+Reaping children with waitpid():
+  pid 4234 terminated, exit status 0
+  pid 4235 terminated by signal 9
+  pid 4236 terminated, exit status 2
+  pid 4237 terminated, exit status 7

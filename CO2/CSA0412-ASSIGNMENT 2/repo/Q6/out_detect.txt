@@ -1,0 +1,3 @@
+Detection run 1: 3 deadlocked job(s): J1 J2 J3
+Recovery: abort J2 (cheapest victim, 5 minutes of work lost) and release LIC
+Detection run 2: 0 deadlocked job(s) - the cluster can continue

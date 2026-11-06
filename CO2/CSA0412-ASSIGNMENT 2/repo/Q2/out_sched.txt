@@ -1,0 +1,76 @@
+=========== SET A (lower priority number = higher priority) ===========
+--- FCFS ---
+Gantt: P1(0-8) P2(8-12) P3(12-21) P4(21-26)
+Proc  AT  BT  CT  TAT  WT  RT
+P1     0   8   8    8   0   0
+P2     1   4  12   11   7   7
+P3     2   9  21   19  10  10
+P4     3   5  26   23  18  18
+Average: TAT = 15.25  WT = 8.75  RT = 8.75   Context switches = 3
+
+--- SJF (non-preemptive) ---
+Gantt: P1(0-8) P2(8-12) P4(12-17) P3(17-26)
+Proc  AT  BT  CT  TAT  WT  RT
+P1     0   8   8    8   0   0
+P2     1   4  12   11   7   7
+P3     2   9  26   24  15  15
+P4     3   5  17   14   9   9
+Average: TAT = 14.25  WT = 7.75  RT = 7.75   Context switches = 3
+
+--- SRTF (preemptive SJF) ---
+Gantt: P1(0-1) P2(1-5) P4(5-10) P1(10-17) P3(17-26)
+Proc  AT  BT  CT  TAT  WT  RT
+P1     0   8  17   17   9   0
+P2     1   4   5    4   0   0
+P3     2   9  26   24  15  15
+P4     3   5  10    7   2   2
+Average: TAT = 13.00  WT = 6.50  RT = 4.25   Context switches = 4
+
+--- Priority (non-preemptive) ---
+Gantt: P1(0-8) P3(8-17) P4(17-22) P2(22-26)
+Proc  AT  BT  CT  TAT  WT  RT
+P1     0   8   8    8   0   0
+P2     1   4  26   25  21  21
+P3     2   9  17   15   6   6
+P4     3   5  22   19  14  14
+Average: TAT = 16.75  WT = 10.25  RT = 10.25   Context switches = 3
+
+--- Round Robin, q = 3 ---
+Gantt: P1(0-3) P2(3-6) P3(6-9) P4(9-12) P1(12-15) P2(15-16) P3(16-19) P4(19-21) P1(21-23) P3(23-26)
+Proc  AT  BT  CT  TAT  WT  RT
+P1     0   8  23   23  15   0
+P2     1   4  16   15  11   2
+P3     2   9  26   24  15   4
+P4     3   5  21   18  13   6
+Average: TAT = 20.00  WT = 13.50  RT = 3.00   Context switches = 9
+
+=========== QUANTUM STUDY (Set A, Round Robin) ===========
+q    avgTAT  avgWT  avgRT  context-switches
+1     19.00  12.50   0.75  23
+3     20.00  13.50   3.00  9
+5     17.50  11.00   5.50  5
+20    15.25   8.75   8.75  3
+
+=========== SET B: VIDEO SERVICE (2 films + 4 thumbnails) ===========
+Policy            avgWT(thumbnails)  avgWT(films)  avgWT(all)  avgRT(thumbnails)  switches
+FCFS                    66.50          19.50        50.83          66.50            5
+SJF                     36.50          23.50        32.17          36.50            5
+SRTF                     1.50          23.00         8.67           1.50            7
+RR q=3                   7.00          37.50        17.17           7.00           24
+RR q=20                 36.50          37.50        36.83          36.50            7
+MLFQ 2/4/8               1.50          34.00        12.33           1.50           14
+
+--- MLFQ (quanta 2/4/8) on Set B ---
+Gantt: Film1(0-2) Film2(2-4) Film1(4-5) Th1(5-7) Th2(7-9) Th3(9-11) Th4(11-13) Film2(13-17) Film1(17-21) Film2(21-29) Film1(29-37) Film2(37-45) Film1(45-53) Film2(53-61) Film1(61-78)
+Proc  AT  BT  CT  TAT  WT  RT
+Film1   0  40  78   78  38   0
+Film2   1  30  61   60  30   1
+Th1    5   2   7    2   0   0
+Th2    6   2   9    3   1   1
+Th3    7   2  11    4   2   2
+Th4    8   2  13    5   3   3
+Average: TAT = 25.33  WT = 12.33  RT = 1.17   Context switches = 14
+
+=========== STARVATION AND AGEING (preemptive priority) ===========
+without ageing: L (priority 9, burst 4, arrives 0) completes at t = 28, waiting time = 24
+with ageing   : L (priority 9, burst 4, arrives 0) completes at t = 22, waiting time = 18

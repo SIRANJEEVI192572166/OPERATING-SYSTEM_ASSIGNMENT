@@ -1,0 +1,4 @@
+Size          Pipe (ms) Shared mem (ms)   Pipe/Shm  checksums equal
+1    MB           1.19           0.60       1.98  yes
+10   MB           9.97           3.03       3.29  yes
+100  MB          86.10          25.55       3.37  yes

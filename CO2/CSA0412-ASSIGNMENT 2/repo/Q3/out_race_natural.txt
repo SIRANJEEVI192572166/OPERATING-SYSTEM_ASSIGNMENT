@@ -1,0 +1,5 @@
+Mode: natural scheduling
+Expected value        : 8000000
+Unprotected counter   : 8000000   (lost updates: 0)
+Mutex-protected       : 8000000   (lost updates: 0)
+Atomic (fetch_add)    : 8000000   (lost updates: 0)

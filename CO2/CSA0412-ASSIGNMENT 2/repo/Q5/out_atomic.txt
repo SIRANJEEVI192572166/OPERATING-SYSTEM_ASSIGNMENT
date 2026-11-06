@@ -1,0 +1,11 @@
+1600000 updates in total, CPUs online: 1
+Method              Threads    ns/update      Wall (ms)     CPU (ms)
+Mutex                     1         24.0           38.4         36.0 
+Mutex                     4         23.0           36.8         35.9 
+Mutex                    16         21.2           33.9         33.7 
+Spin lock                 1          8.3           13.4         13.1 
+Spin lock                 4         30.1           48.2         44.5 
+Spin lock                16         76.6          122.6        117.3 
+Atomic fetch_add          1          6.8           10.8         10.8 
+Atomic fetch_add          4          7.3           11.7         11.7 
+Atomic fetch_add         16          8.1           13.0         12.8 

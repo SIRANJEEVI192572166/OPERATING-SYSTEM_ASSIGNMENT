@@ -1,0 +1,8 @@
+Active sessions simulated: 2000
+
+PROCESSES: created 2000 in 125.2 ms (62.6 us each); memory used 217256 KB (108.6 KB each)
+THREADS:   created 2000 in 43.0 ms (21.5 us each); memory used 38756 KB (19.4 KB each)
+
+CONTEXT SWITCH (pipe ping-pong, 100000 round trips, 1 CPU):
+  process <-> process : 1.35 us per switch
+  thread  <-> thread  : 1.18 us per switch
