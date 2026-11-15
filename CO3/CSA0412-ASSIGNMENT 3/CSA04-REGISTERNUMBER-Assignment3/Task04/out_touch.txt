@@ -1,0 +1,5 @@
+$ ./touch <size in MB>
+  16 MB (4096 pages): sequential  faults=4099  time=0.0047 s | random  faults=4096  time=0.0044 s
+  64 MB (16384 pages): sequential  faults=16387  time=0.0243 s | random  faults=16384  time=0.0189 s
+ 256 MB (65536 pages): sequential  faults=65539  time=0.0952 s | random  faults=65536  time=0.0822 s
+ 512 MB (131072 pages): sequential  faults=131075  time=0.2102 s | random  faults=131072  time=0.1982 s

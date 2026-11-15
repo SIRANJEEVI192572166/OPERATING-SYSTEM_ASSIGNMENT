@@ -1,0 +1,12 @@
+$ ./sim
+Page faults after 4000 ticks (1 unit = 4 MB, 437 units available)
+Scenario                           Policy RT control         ML    Logging   4th task
+3 tasks, RT pages locked           FIFO           25        375         13          0
+3 tasks, RT pages locked           LRU            25        375         13          0
+3 tasks, RT pages locked           Clock          25        375         13          0
+4 tasks, RT NOT locked             FIFO         7150     100000       2005      19296
+4 tasks, RT NOT locked             LRU            25     100000       3868      14641
+4 tasks, RT NOT locked             Clock          50     100000       2105      16507
+4 tasks, RT pages locked           FIFO           25     100000       2005      19296
+4 tasks, RT pages locked           LRU            25     100000       3868      14641
+4 tasks, RT pages locked           Clock          25     100000       2105      16507

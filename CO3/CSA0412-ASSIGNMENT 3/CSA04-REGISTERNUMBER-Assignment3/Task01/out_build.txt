@@ -1,0 +1,17 @@
+$ gcc -std=c11 -Wall -Wextra -fPIC -shared enc.c -o libenc.so
+$ gcc -std=c11 -Wall -Wextra bank.c -L. -lenc -Wl,-rpath,$ORIGIN -o bank_dyn
+$ gcc -std=c11 -Wall -Wextra -static bank.c -L. -lenc -o bank_static
+$ ls -l bank_dyn bank_static libenc.so
+-rwxr-xr-x 1 root root  16544 Nov 12 09:16 bank_dyn
+-rwxr-xr-x 1 root root 785776 Nov 12 09:16 bank_static
+-rwxr-xr-x 1 root root  15224 Nov 12 09:16 libenc.so
+$ ldd bank_dyn
+	linux-vdso.so.1 (0x00007fca4d0e0000)
+	libenc.so => /home/claude/work/Q1/./libenc.so (0x00007fca4d0ce000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fca4ce00000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fca4d0e2000)
+$ ldd bank_static
+	not a dynamic executable
+$ file bank_static bank_dyn
+bank_static: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=1a05ca
+bank_dyn:    ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l

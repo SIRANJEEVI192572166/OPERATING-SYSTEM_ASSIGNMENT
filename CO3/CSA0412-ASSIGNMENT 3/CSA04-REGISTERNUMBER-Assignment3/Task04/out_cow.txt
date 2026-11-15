@@ -1,0 +1,6 @@
+$ ./cow
+parent: allocated and filled 128 MB, RssAnon = 131168 kB
+child : right after fork()     RssAnon = 131172 kB (own view), minor faults so far = 11
+child : after READING all pages  minor faults added = 0  (pages stay shared)
+child : after WRITING all pages  minor faults added = 32769  (one copy-on-write fault per page), write time = 0.059 s
+parent: fork() of a 128 MB process took 1.146 ms (only page tables are copied)

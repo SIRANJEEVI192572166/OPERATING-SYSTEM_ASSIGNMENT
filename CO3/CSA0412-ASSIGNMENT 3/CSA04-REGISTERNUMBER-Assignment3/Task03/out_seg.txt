@@ -1,0 +1,19 @@
+$ ./seg
+Segment table: no name  base limit perm
+               0  code  1400 1000 R-X
+               1  data  6300  400 RW-
+               2  stack 4300  400 RW-
+               3  heap  3200 1100 RW-
+               4  const 4700 1000 R--
+
+(seg 0, off    0, R) -> code  physical = 1400 + 0 = 1400
+(seg 0, off  999, R) -> code  physical = 1400 + 999 = 2399
+(seg 1, off  399, W) -> data  physical = 6300 + 399 = 6699
+(seg 2, off  200, W) -> stack physical = 4300 + 200 = 4500
+(seg 3, off 1099, W) -> heap  physical = 3200 + 1099 = 4299
+(seg 4, off  500, R) -> const physical = 4700 + 500 = 5200
+(seg 1, off  400, R) -> TRAP: offset 400 >= limit 400 (segmentation fault)
+(seg 3, off 1100, R) -> TRAP: offset 1100 >= limit 1100 (segmentation fault)
+(seg 0, off  100, W) -> TRAP: write to R-X segment (protection fault)
+(seg 4, off   10, W) -> TRAP: write to R-- segment (protection fault)
+(seg 5, off    0, R) -> TRAP: invalid segment number

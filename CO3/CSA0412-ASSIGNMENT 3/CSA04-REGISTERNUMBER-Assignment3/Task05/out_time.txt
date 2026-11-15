@@ -1,0 +1,4 @@
+TIME total for frames 3..10 (8 runs x 100,000 refs), seconds
+workload       FIFO       LRU     CLOCK       OPT
+random       0.0040    0.0082    0.0089    0.0103
+locality     0.0065    0.0084    0.0097    0.0087

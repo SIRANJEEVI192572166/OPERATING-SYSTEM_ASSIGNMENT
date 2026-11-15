@@ -1,0 +1,9 @@
+Assumptions: memory access m = 100 ns, TLB lookup t = 20 ns, single-level page table
+Without TLB: EAT = 2m = 200 ns
+ Hit ratio   EAT (ns)    Slow-down vs 100 ns
+       80%      140.0                  1.40x
+       95%      125.0                  1.25x
+       99%      121.0                  1.21x
+
+32-bit, 4 KB pages: entries = 2^20 = 1,048,576; PTE = 4 B; flat table = 4,194,304 B = 4 MB = 0.0 GB
+48-bit, 4 KB pages: entries = 2^36 = 68,719,476,736; PTE = 8 B; flat table = 549,755,813,888 B = 524,288 MB = 512.0 GB

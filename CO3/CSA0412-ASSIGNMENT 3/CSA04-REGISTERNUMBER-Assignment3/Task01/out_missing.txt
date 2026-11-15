@@ -1,0 +1,11 @@
+--- Shared library missing ---
+$ ./bank_dyn
+./bank_dyn: error while loading shared libraries: libenc.so: cannot open shared object file: No such file or directory
+exit status = 127
+$ ./bank_static
+[bank] libenc v1 (XOR key 0x5A)
+exit status = 0
+$ ./bank_dl
+[bank_dl] cannot load library: ./libenc.so: cannot open shared object file: No such file or directory
+[bank_dl] falling back: refusing to send data in clear text
+exit status = 2

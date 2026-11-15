@@ -1,0 +1,4 @@
+$ ./segv
+child: writing beyond the end of a mapped region / to read-only memory ...
+parent: child killed by signal 11 (Segmentation fault)
+(a core dump / SIGSEGV is the OS reaction to the hardware trap)

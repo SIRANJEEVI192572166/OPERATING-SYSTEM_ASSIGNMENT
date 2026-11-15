@@ -1,0 +1,33 @@
+--- Two copies running: per-file totals from /proc/<pid>/smaps (kB) ---
+PID 4263
+  bank_dyn Private_Clean:       0
+  bank_dyn Private_Dirty:       8
+  bank_dyn Pss:                14
+  bank_dyn Rss:                20
+  bank_dyn Shared_Clean:        0
+  libc.so.6 Private_Clean:      0
+  libc.so.6 Private_Dirty:     24
+  libc.so.6 Pss:              275
+  libc.so.6 Rss:             1408
+  libc.so.6 Shared_Clean:    1384
+  libenc.so Private_Clean:      0
+  libenc.so Private_Dirty:      8
+  libenc.so Pss:               14
+  libenc.so Rss:               20
+  libenc.so Shared_Clean:       0
+PID 4264
+  bank_dyn Private_Clean:       0
+  bank_dyn Private_Dirty:       8
+  bank_dyn Pss:                14
+  bank_dyn Rss:                20
+  bank_dyn Shared_Clean:        0
+  libc.so.6 Private_Clean:      0
+  libc.so.6 Private_Dirty:     24
+  libc.so.6 Pss:              275
+  libc.so.6 Rss:             1408
+  libc.so.6 Shared_Clean:    1384
+  libenc.so Private_Clean:      0
+  libenc.so Private_Dirty:      8
+  libenc.so Pss:               14
+  libenc.so Rss:               20
+  libenc.so Shared_Clean:       0

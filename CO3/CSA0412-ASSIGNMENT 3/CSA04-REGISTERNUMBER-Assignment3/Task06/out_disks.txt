@@ -1,0 +1,26 @@
+$ lsblk
+NAME  MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+zram0 253:0    0    0B  0 disk 
+vda   254:0    0  256G  0 disk /
+vdb   254:16   0  9.4M  1 disk /opt/rclone
+vdc   254:32   0  732K  1 disk /mnt/skills/public
+vdd   254:48   0  5.8M  1 disk /mnt/skills/examples
+
+$ cat /proc/swaps
+Filename				Type		Size		Used		Priority
+
+$ free -m
+               total        used        free      shared  buff/cache   available
+Mem:            3990         282        3740          18         186        3708
+Swap:              0           0           0
+
+$ cat /proc/partitions
+major minor  #blocks  name
+
+ 254        0  268435456 vda
+ 254       16       9660 vdb
+ 254       32        732 vdc
+ 254       48       5972 vdd
+
+$ fdisk -l
+/bin/sh: 6: fdisk: not found

@@ -1,0 +1,5 @@
+Process: 1024 KB in 5 segments [200, 100, 100, 400, 224] KB, 4 KB pages, 4-byte entries
+Pure paging       : 256 entries x 4 B = 1024 B
+Pure segmentation : 5 entries x 8 B (base+limit) = 40 B
+Segmented paging  : 5 x 8 B segment table + 256 x 4 B = 1064 B
+Internal frag, segmented paging: 0 B

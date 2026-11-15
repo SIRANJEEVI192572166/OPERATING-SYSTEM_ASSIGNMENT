@@ -1,0 +1,2 @@
+first read (cold, may include device)   : 512 MB in 0.182 s = 2,807 MB/s
+second read (page cache)                : 512 MB in 0.095 s = 5,365 MB/s

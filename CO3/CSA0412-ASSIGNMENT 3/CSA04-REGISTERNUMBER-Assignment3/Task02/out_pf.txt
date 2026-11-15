@@ -1,0 +1,17 @@
+$ getconf PAGESIZE
+4096
+$ ./pfcount ls /usr   # same data as /usr/bin/time -v
+command: ls
+minor page faults: 109
+major page faults: 0
+max RSS: 2100 kB
+$ ./pfcount ../Q1/bank_dyn
+command: ../Q1/bank_dyn
+minor page faults: 91
+major page faults: 0
+max RSS: 1628 kB
+$ ./pfcount ../Q1/bank_static
+command: ../Q1/bank_static
+minor page faults: 51
+major page faults: 0
+max RSS: 592 kB

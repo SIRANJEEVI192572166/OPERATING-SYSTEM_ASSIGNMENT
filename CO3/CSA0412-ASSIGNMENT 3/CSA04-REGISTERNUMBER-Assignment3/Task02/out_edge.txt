@@ -1,0 +1,10 @@
+$ ./edge   # PAGE_SIZE = 4096
+     0 (start of page 0               ) page 0 off    0 : physical 20480
+  4095 (end of page 0                 ) page 0 off 4095 : physical 24575
+  4096 (start of page 1               ) page 1 off    0 : physical 8192
+  8191 (end of page 1                 ) page 1 off 4095 : physical 12287
+ 12288 (start of page 3               ) page 3 off    0 : physical 28672
+ 28671 (end of page 6                 ) page 6 off 4095 : physical 16383
+ 28672 (start of page 7 (not resident)) page 7 off    0 : page fault
+ 32767 (end of page 7                 ) page 7 off 4095 : page fault
+ 32768 (beyond last page              ) page 8 off    0 : invalid address (trap to OS)

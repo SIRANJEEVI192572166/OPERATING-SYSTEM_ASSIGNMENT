@@ -1,0 +1,8 @@
+$ ./rt          # memory not locked
+no lock   cycles=24576  page faults in loop=24578  mean=1338 ns  WORST-CASE delay=822787 ns
+no lock   cycles=24576  page faults in loop=24578  mean=1316 ns  WORST-CASE delay=665821 ns
+no lock   cycles=24576  page faults in loop=24578  mean=1277 ns  WORST-CASE delay=53626 ns
+$ ./rt lock     # mlockall(MCL_CURRENT|MCL_FUTURE) + pre-fault
+mlockall  cycles=24576  page faults in loop=1  mean=105 ns  WORST-CASE delay=21022 ns
+mlockall  cycles=24576  page faults in loop=1  mean=103 ns  WORST-CASE delay=34602 ns
+mlockall  cycles=24576  page faults in loop=1  mean=104 ns  WORST-CASE delay=32156 ns

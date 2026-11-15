@@ -1,0 +1,11 @@
+--- Replace shared library without recompiling ---
+$ ./bank_dyn
+[bank] libenc v1 (XOR key 0x5A)
+[bank] cipher bytes: 1b 19 19 0e 60 6b 6a 6a 6b 7a 18 1b 16 60 6f 6a 6a 6a 6a
+$ gcc -fPIC -shared enc_v2.c -o libenc.so   # only the library is rebuilt
+$ ./bank_dyn   # same executable, not recompiled
+[bank] libenc v2 (XOR key 0x33, security fix)
+[bank] cipher bytes: 72 70 70 67 09 02 03 03 02 13 71 72 7f 09 06 03 03 03 03
+$ ./bank_static   # still uses the old copy
+[bank] libenc v1 (XOR key 0x5A)
+[bank] cipher bytes: 1b 19 19 0e 60 6b 6a 6a 6b 7a 18 1b 16 60 6f 6a 6a 6a 6a

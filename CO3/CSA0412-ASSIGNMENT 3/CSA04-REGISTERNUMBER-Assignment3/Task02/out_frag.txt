@@ -1,0 +1,7 @@
+$ ./frag
+100 processes, random sizes 1..1,000,000 bytes (seed 42), total = 49841975 bytes
+
+Page      Pages used     Internal frag (B)  Avg per process  % of memory
+1 KB      48719          46281              462.8            0.093     
+4 KB      12219          207049             2070.5           0.414     
+2 MB      100            159873225          1598732.2        76.233    

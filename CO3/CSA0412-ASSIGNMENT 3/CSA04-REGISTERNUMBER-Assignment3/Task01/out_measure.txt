@@ -1,0 +1,8 @@
+$ python3 measure.py
+./bank_static          average start-up + run time = 0.500 ms (2000 runs)
+./bank_dyn             average start-up + run time = 0.747 ms (2000 runs)
+./bank_dl nocrypto     average start-up + run time = 0.644 ms (2000 runs)
+./bank_dl              average start-up + run time = 0.692 ms (2000 runs)
+$ bash measure_mem.sh   # reads /proc/<pid>/status of a running copy
+bank_static VmSize=1012 kB  bank_static VmRSS=728 kB  bank_static RssAnon=52 kB  bank_static RssFile=676 kB  
+bank_dyn VmSize=2712 kB  bank_dyn VmRSS=1740 kB  bank_dyn RssAnon=112 kB  bank_dyn RssFile=1628 kB  

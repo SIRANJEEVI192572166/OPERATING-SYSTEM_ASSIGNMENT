@@ -1,0 +1,9 @@
+$ ./segv
+child: storing into read-only memory (a segment without write permission) ...
+parent: child killed by signal 11 (Segmentation fault)
+$ ./segfrag
+Loaded 20 segments (10 KB - 100 KB), first-fit, total used = 1077258 B of 2097152 B
+Removed 10 segments (the odd-numbered ones), freed = 574912 B
+Free holes = 10, total free = 1594806 B, largest hole = 1050630 B
+External fragmentation = 1 - largest/total_free = 34.1 %
+A new 1050631 B segment cannot be placed contiguously inside holes, although 1594806 B are free.
