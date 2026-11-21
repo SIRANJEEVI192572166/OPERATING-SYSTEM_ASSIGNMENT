@@ -1,0 +1,27 @@
+# Result portal + LMS + database. Each service has its own CPU/memory limits.
+services:
+  portal:
+    build: ../B2
+    image: result-portal
+    ports: ["8000:8000"]
+    deploy:
+      resources:
+        limits: { cpus: "0.50", memory: 128M }
+    depends_on: [db]
+  lms:
+    build:
+      context: .
+      dockerfile: Dockerfile.lms
+    image: lms-service
+    ports: ["8001:8000"]
+    deploy:
+      resources:
+        limits: { cpus: "0.25", memory: 96M }
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+volumes:
+  dbdata:
