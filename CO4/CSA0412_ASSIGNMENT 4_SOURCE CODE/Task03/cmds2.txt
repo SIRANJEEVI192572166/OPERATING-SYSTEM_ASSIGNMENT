@@ -1,0 +1,15 @@
+$ tune2fs -l ext4test.img | grep -E "Filesystem features|Inode count|Free inodes|Block count|Free blocks|Block size|Inode size|Journal"
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Inode count:              16384
+Block count:              16384
+Free blocks:              14319
+Free inodes:              16373
+Block size:               4096
+Inode size:	          256
+Journal inode:            8
+Journal backup:           inode blocks
+$ dumpe2fs -h ext4test.img 2>/dev/null | grep -E "Block size|Inode count|Free blocks|Journal size|Inodes per group"
+Inode count:              16384
+Free blocks:              14319
+Block size:               4096
+Inodes per group:         16384

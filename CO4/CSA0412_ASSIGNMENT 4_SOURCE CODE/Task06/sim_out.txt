@@ -1,0 +1,12 @@
+Per-node chunk requests: 10,000 | latency = queue wait + service (ms) to deliver the first 2 MiB chunk
+HDD service 23.82 ms, SSD service 0.80 ms
+
+Design A    150/s  mean     24.8  p95     31.3  max     53.6  SSD hits  0.0%  HDD util  60.0%  SSD util  0.0%
+Design B    150/s  mean      4.5  p95     23.8  max     34.8  SSD hits 83.9%  HDD util  14.4%  SSD util  5.1%
+
+Design A    200/s  mean     28.7  p95     45.0  max     76.7  SSD hits  0.0%  HDD util  80.0%  SSD util  0.0%
+Design B    200/s  mean      4.5  p95     23.8  max     38.0  SSD hits 83.9%  HDD util  19.3%  SSD util  6.8%
+
+Design A    372/s  mean   6562.4  p95  12449.2  max  13025.8  SSD hits  0.0%  HDD util 148.7%  SSD util  0.0%
+Design B    372/s  mean      4.6  p95     23.8  max     42.5  SSD hits 83.9%  HDD util  35.8%  SSD util 12.6%
+

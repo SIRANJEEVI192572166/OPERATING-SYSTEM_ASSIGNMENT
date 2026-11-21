@@ -1,0 +1,18 @@
+$ truncate -s 64M ext4test.img && mkfs.ext4 -q -b 4096 ext4test.img
+$ echo "hello operating systems" > sample.txt && ls -i sample.txt
+434218 sample.txt
+$ stat sample.txt
+  File: sample.txt
+  Size: 24        	Blocks: 8          IO Block: 4096   regular file
+Device: 254,0	Inode: 434218      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-11-19 13:02:42.568344617 +0000
+Modify: 2026-11-19 13:02:42.568344617 +0000
+Change: 2026-11-19 13:02:42.568344617 +0000
+ Birth: 2026-11-19 13:02:42.568344617 +0000
+$ df -i .
+Filesystem       Inodes  IUsed    IFree IUse% Mounted on
+/dev/vda       16777216 165030 16612186    1% /
+$ df -h .
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda        252G  6.6G   10G  40% /
